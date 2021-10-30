@@ -1,0 +1,130 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for edu.ucr.cs.cs167.aalog001:aalog001_lab5:jar:1.0-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-jar-plugin is missing. @ line 70, column 15
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] --------------< edu.ucr.cs.cs167.aalog001:aalog001_lab5 >---------------
+[INFO] Building aalog001_lab5 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ aalog001_lab5 ---
+[INFO] Deleting /home/alp/workspace/aalog001_lab5/target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ aalog001_lab5 ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ aalog001_lab5 ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- scala-maven-plugin:3.3.2:compile (default) @ aalog001_lab5 ---
+[INFO] /home/alp/workspace/aalog001_lab5/src/main/scala:-1: info: compiling
+[INFO] Compiling 1 source files to /home/alp/workspace/aalog001_lab5/target/classes at 1619767962965
+[INFO] prepare-compile in 0 s
+[INFO] compile in 8 s
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ aalog001_lab5 ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/alp/workspace/aalog001_lab5/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ aalog001_lab5 ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- scala-maven-plugin:3.3.2:testCompile (default) @ aalog001_lab5 ---
+[INFO] /home/alp/workspace/aalog001_lab5/src/test/scala:-1: info: compiling
+[INFO] Compiling 3 source files to /home/alp/workspace/aalog001_lab5/target/test-classes at 1619767971379
+[INFO] prepare-compile in 0 s
+[INFO] compile in 8 s
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.21.0:test (default-test) @ aalog001_lab5 ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- scalatest-maven-plugin:2.0.0:test (test) @ aalog001_lab5 ---
+Run starting. Expected test count is: 1
+JUnitWrapperSuite:
+- testOK
+Run completed in 226 milliseconds.
+Total number of tests run: 1
+Suites: completed 1, aborted 0
+Tests: succeeded 1, failed 0, canceled 0, ignored 0, pending 0
+All tests passed.
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ aalog001_lab5 ---
+[INFO] Building jar: /home/alp/workspace/aalog001_lab5/target/aalog001_lab5-1.0-SNAPSHOT.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  22.728 s
+[INFO] Finished at: 2021-04-30T00:33:01-07:00
+[INFO] ------------------------------------------------------------------------
+Using Spark master 'local[2]'
+MapPartitionsRDD[3] at map at App.scala:20
+Total count for file 'nasa_19950630.22-19950728.12.tsv' is 1891709
+Command 'count-all' on file 'nasa_19950630.22-19950728.12.tsv' finished in 3.215247606 seconds
+Using Spark master 'local[2]'
+MapPartitionsRDD[3] at map at App.scala:20
+Total count for file 'nasa_19950630.22-19950728.12.tsv' with response code 302 is 46573
+Command 'code-filter' on file 'nasa_19950630.22-19950728.12.tsv' finished in 4.236929214 seconds
+Using Spark master 'local[2]'
+MapPartitionsRDD[3] at map at App.scala:20
+Total count for file 'nasa_19950630.22-19950728.12.tsv' in time range [804955673,805590159]  is 554919
+Command 'time-filter' on file 'nasa_19950630.22-19950728.12.tsv' finished in 3.636074513 seconds
+Using Spark master 'local[2]'
+MapPartitionsRDD[3] at map at App.scala:20
+Number of lines per code for the file nasa_19950630.22-19950728.12.tsv
+Code,Count
+302,46573
+501,14
+404,10845
+500,62
+403,54
+304,132627
+200,1701534
+Command 'count-by-code' on file 'nasa_19950630.22-19950728.12.tsv' finished in 5.593369792000001 seconds
+Using Spark master 'local[2]'
+MapPartitionsRDD[3] at map at App.scala:20
+Total bytes per code for the file nasa_19950630.22-19950728.12.tsv
+Code,Sum(bytes)
+501,0
+403,0
+304,0
+200,38692291442
+404,0
+302,3682049
+500,0
+Command 'sum-bytes-by-code' on file 'nasa_19950630.22-19950728.12.tsv' finished in 5.655364111 seconds
+Using Spark master 'local[2]'
+MapPartitionsRDD[3] at map at App.scala:20
+Average bytes per code for the file nasa_19950630.22-19950728.12.tsv
+Code,Avg(bytes)
+501,0.0
+403,0.0
+304,0.0
+200,22739.652244386536
+404,0.0
+302,79.0597341807485
+500,0.0
+Command 'avg-bytes-by-code' on file 'nasa_19950630.22-19950728.12.tsv' finished in 5.954945591 seconds
+Using Spark master 'local[2]'
+MapPartitionsRDD[3] at map at App.scala:20
+Top host in the file nasa_19950630.22-19950728.12.tsv by number of entries
+Host: piweba3y.prodigy.com
+Number of entries: 17572
+Command 'top-host' on file 'nasa_19950630.22-19950728.12.tsv' finished in 8.970412043000001 seconds
+Using Spark master 'local[2]'
+MapPartitionsRDD[3] at map at App.scala:20
+Comparison of the number of lines per code before and after 805383872 on file nasa_19950630.22-19950728.12.tsv
+Code,Count before,Count after
+302,21057,25516
+501,2,12
+404,3864,6981
+500,53,9
+403,19,35
+304,38000,94627
+200,594412,1107122
+Command 'comparison' on file 'nasa_19950630.22-19950728.12.tsv' finished in 7.458513723 seconds

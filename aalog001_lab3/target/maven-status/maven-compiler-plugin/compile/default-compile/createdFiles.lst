@@ -1,0 +1,6 @@
+edu/ucr/cs/cs167/aalog001/App.class
+edu/ucr/cs/cs167/aalog001/Filter.class
+edu/ucr/cs/cs167/aalog001/Aggregation$TokenizerMapper.class
+edu/ucr/cs/cs167/aalog001/Filter$TokenizerMapper.class
+edu/ucr/cs/cs167/aalog001/Aggregation$IntSumReducer.class
+edu/ucr/cs/cs167/aalog001/Aggregation.class

@@ -1,0 +1,129 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for edu.ucr.cs.cs167.aalog001:aalog001_lab7:jar:1.0-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-jar-plugin is missing. @ line 132, column 15
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] --------------< edu.ucr.cs.cs167.aalog001:aalog001_lab7 >---------------
+[INFO] Building aalog001_lab7 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ aalog001_lab7 ---
+[INFO] Deleting /home/alp/workspace/aalog001_lab7/target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ aalog001_lab7 ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ aalog001_lab7 ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- scala-maven-plugin:3.3.2:compile (default) @ aalog001_lab7 ---
+[INFO] /home/alp/workspace/aalog001_lab7/src/main/scala:-1: info: compiling
+[INFO] Compiling 1 source files to /home/alp/workspace/aalog001_lab7/target/classes at 1621624049599
+[INFO] prepare-compile in 0 s
+[INFO] compile in 7 s
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ aalog001_lab7 ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/alp/workspace/aalog001_lab7/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ aalog001_lab7 ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- scala-maven-plugin:3.3.2:testCompile (default) @ aalog001_lab7 ---
+[INFO] /home/alp/workspace/aalog001_lab7/src/test/scala:-1: info: compiling
+[INFO] Compiling 3 source files to /home/alp/workspace/aalog001_lab7/target/test-classes at 1621624057193
+[INFO] prepare-compile in 0 s
+[INFO] compile in 10 s
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.21.0:test (default-test) @ aalog001_lab7 ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- scalatest-maven-plugin:2.0.0:test (test) @ aalog001_lab7 ---
+Run starting. Expected test count is: 1
+JUnitWrapperSuite:
+- testOK
+Run completed in 239 milliseconds.
+Total number of tests run: 1
+Suites: completed 1, aborted 0
+Tests: succeeded 1, failed 0, canceled 0, ignored 0, pending 0
+All tests passed.
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ aalog001_lab7 ---
+[INFO] Building jar: /home/alp/workspace/aalog001_lab7/target/aalog001_lab7-1.0-SNAPSHOT.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  25.554 s
+[INFO] Finished at: 2021-05-21T12:07:49-07:00
+[INFO] ------------------------------------------------------------------------
+Using Spark master 'local[2]'
+ElasticNetParam: 1.0
+regParam: 0.3
+coefficients: [-59211.01805222118,4864.31388187152,319.4801090048582,-0.36585514722671797]
++--------+------------------+
+|   price|        prediction|
++--------+------------------+
+|647500.0| 491826.7495389448|
+|239000.0|473137.24716882396|
+|175000.0|221695.56873211067|
+|520000.0|353129.37092415866|
+|411000.0|323453.76564351545|
++--------+------------------+
+only showing top 5 rows
+
+RMSE on test set is 245316.07277301833
+Correlation is [1.0                 0.7064380374818432  
+0.7064380374818432  1.0                 ]
+Applied algorithm regression on input kc_house_data.csv in 55.174178818 seconds
+Using Spark master 'local[2]'
+root
+ |-- text: string (nullable = true)
+ |-- sentiment: string (nullable = true)
+
++--------------------+---------+
+|                text|sentiment|
++--------------------+---------+
+|My daughter liked...|      neg|
+|I... No words. No...|      neg|
+|this film is basi...|      neg|
+|This is a terribl...|      neg|
+|First of all this...|      pos|
++--------------------+---------+
+only showing top 5 rows
+
+(numFeatures: ,1000)
+(regParam: ,0.1)
++--------------------+-----+----------+--------------------+
+|                text|label|prediction|         probability|
++--------------------+-----+----------+--------------------+
+|"A Tale of Two Si...|  0.0|       0.0|[0.63568977953259...|
+|"Back in the Day"...|  0.0|       1.0|[0.46618512449468...|
+|"Beowulf" is like...|  1.0|       1.0|[0.24872269581494...|
+|"Black Friday" di...|  1.0|       1.0|[0.35410742573574...|
+|"Boy Next Door" i...|  0.0|       0.0|[0.69604202049654...|
+|"Brotherhood of S...|  0.0|       0.0|[0.79256441698609...|
+|"Carlito's Angels...|  1.0|       0.0|[0.68256674679419...|
+|"Cat In The Brain...|  0.0|       1.0|[0.47201202596970...|
+|"Challenge to be ...|  0.0|       0.0|[0.81445448127259...|
+|"Checking Out" is...|  0.0|       0.0|[0.66259237007441...|
+|"Committed", as i...|  1.0|       1.0|[0.26230972404514...|
+|"Dead Man Walking...|  0.0|       1.0|[0.30842982151992...|
+|"Delusion" is wha...|  1.0|       1.0|[0.31119469835412...|
+|"Disappointing" i...|  1.0|       0.0|[0.80618854945169...|
+|"Duckman" is a gr...|  0.0|       0.0|[0.97562273034545...|
+|"Eighteen" (2004)...|  0.0|       0.0|[0.82213978423079...|
+|"Electra Glide in...|  1.0|       0.0|[0.52049799832107...|
+|"Fate" leads Walt...|  1.0|       1.0|[0.05745926832438...|
+|"Female Convict S...|  0.0|       0.0|[0.71159384698371...|
+|"Flesh" is hard t...|  0.0|       0.0|[0.72715712884835...|
++--------------------+-----+----------+--------------------+
+only showing top 20 rows
+
+Accuracy of the test set is 0.7997795370518822
+Applied algorithm classification on input sentiment.csv in 169.01070738 seconds

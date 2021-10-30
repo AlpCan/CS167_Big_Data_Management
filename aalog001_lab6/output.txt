@@ -1,0 +1,138 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for edu.ucr.cs.cs167.aalog001:aalog001_lab6:jar:1.0-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-jar-plugin is missing. @ line 125, column 15
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] --------------< edu.ucr.cs.cs167.aalog001:aalog001_lab6 >---------------
+[INFO] Building aalog001_lab6 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ aalog001_lab6 ---
+[INFO] Deleting /home/alp/workspace/aalog001_lab6/target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ aalog001_lab6 ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ aalog001_lab6 ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- scala-maven-plugin:3.3.2:compile (default) @ aalog001_lab6 ---
+[INFO] /home/alp/workspace/aalog001_lab6/src/main/scala:-1: info: compiling
+[INFO] Compiling 1 source files to /home/alp/workspace/aalog001_lab6/target/classes at 1620620435132
+[INFO] prepare-compile in 0 s
+[INFO] compile in 9 s
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ aalog001_lab6 ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/alp/workspace/aalog001_lab6/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ aalog001_lab6 ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- scala-maven-plugin:3.3.2:testCompile (default) @ aalog001_lab6 ---
+[INFO] /home/alp/workspace/aalog001_lab6/src/test/scala:-1: info: compiling
+[INFO] Compiling 3 source files to /home/alp/workspace/aalog001_lab6/target/test-classes at 1620620445008
+[INFO] prepare-compile in 0 s
+[INFO] compile in 11 s
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.21.0:test (default-test) @ aalog001_lab6 ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- scalatest-maven-plugin:2.0.0:test (test) @ aalog001_lab6 ---
+Run starting. Expected test count is: 1
+JUnitWrapperSuite:
+- testOK
+Run completed in 303 milliseconds.
+Total number of tests run: 1
+Suites: completed 1, aborted 0
+Tests: succeeded 1, failed 0, canceled 0, ignored 0, pending 0
+All tests passed.
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ aalog001_lab6 ---
+[INFO] Building jar: /home/alp/workspace/aalog001_lab6/target/aalog001_lab6-1.0-SNAPSHOT.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  30.613 s
+[INFO] Finished at: 2021-05-09T21:20:59-07:00
+[INFO] ------------------------------------------------------------------------
+Using Spark master 'local[2]'
+Total count for file 'nasa_19950630.22-19950728.12.tsv' is 1891709
+Command 'count-all' on file 'nasa_19950630.22-19950728.12.tsv' finished in 2.75615187 seconds
+Using Spark master 'local[2]'
+Total count for file 'nasa_19950630.22-19950728.12.tsv' with response code 302 is 46573
+Command 'code-filter' on file 'nasa_19950630.22-19950728.12.tsv' finished in 4.824858499 seconds
+Using Spark master 'local[2]'
+Total count for file 'nasa_19950630.22-19950728.12.tsv' in time range [804955673,805590159]  is 554919
+Command 'time-filter' on file 'nasa_19950630.22-19950728.12.tsv' finished in 4.83393868 seconds
+Using Spark master 'local[2]'
+Number of lines per code for the file nasa_19950630.22-19950728.12.tsv
++--------+-------+
+|response|  count|
++--------+-------+
+|     501|     14|
+|     500|     62|
+|     403|     54|
+|     404|  10845|
+|     200|1701534|
+|     304| 132627|
+|     302|  46573|
++--------+-------+
+
+Command 'count-by-code' on file 'nasa_19950630.22-19950728.12.tsv' finished in 9.788034473 seconds
+Using Spark master 'local[2]'
+Total bytes per code for the file nasa_19950630.22-19950728.12.tsv
++--------+-----------+
+|response| sum(bytes)|
++--------+-----------+
+|     501|          0|
+|     500|          0|
+|     403|          0|
+|     404|          0|
+|     200|38692291442|
+|     304|          0|
+|     302|    3682049|
++--------+-----------+
+
+Command 'sum-bytes-by-code' on file 'nasa_19950630.22-19950728.12.tsv' finished in 11.486361737000001 seconds
+Using Spark master 'local[2]'
+Average bytes per code for the file nasa_19950630.22-19950728.12.tsv
++--------+------------------+
+|response|        avg(bytes)|
++--------+------------------+
+|     501|               0.0|
+|     500|               0.0|
+|     403|               0.0|
+|     404|               0.0|
+|     200|22739.652244386536|
+|     304|               0.0|
+|     302|  79.0597341807485|
++--------+------------------+
+
+Command 'avg-bytes-by-code' on file 'nasa_19950630.22-19950728.12.tsv' finished in 10.556320939 seconds
+Using Spark master 'local[2]'
+Top host in the file nasa_19950630.22-19950728.12.tsv by number of entries
+Host: piweba3y.prodigy.com
+Number of entries: 17572
+Command 'top-host' on file 'nasa_19950630.22-19950728.12.tsv' finished in 12.734760424000001 seconds
+Using Spark master 'local[2]'
+Comparison of the number of lines per code before and after 805383872 on file nasa_19950630.22-19950728.12.tsv
++--------+------------+-----------+
+|response|count_before|count_after|
++--------+------------+-----------+
+|     501|           2|         12|
+|     500|          53|          9|
+|     403|          19|         35|
+|     404|        3864|       6981|
+|     200|      594412|    1107122|
+|     304|       38004|      94623|
+|     302|       21057|      25516|
++--------+------------+-----------+
+
+Command 'comparison' on file 'nasa_19950630.22-19950728.12.tsv' finished in 22.765789085 seconds

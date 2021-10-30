@@ -1,0 +1,9 @@
+Using Spark master 'local[2]'
+Code `302` : number of entries 46573
+Code `501` : number of entries 14
+Code `404` : number of entries 10845
+Code `500` : number of entries 62
+Code `403` : number of entries 54
+Code `response` : number of entries 1
+Code `304` : number of entries 132627
+Code `200` : number of entries 1701534
